@@ -3,7 +3,7 @@ from PIL import Image
 import numpy as np
 
 # Assuming you have a list of image file paths, segmentation mask file paths, and meta information
-image_paths = ["path_to_image1.jpg", "path_to_image2.jpg", "path_to_image3.jpg", "path_to_image4.jpg"]
+image_paths = ["dsss_homework3/1.png", "dsss_homework3/2.png", "dsss_homework3/3.png", "dsss_homework3/4.png"]
 mask_paths = ["path_to_mask1.png", "path_to_mask2.png", "path_to_mask3.png", "path_to_mask4.png"]
 meta_info = ["Subject1.meta", "Subject2.meta", "Subject3.meta", "Subject4.meta"]
 
