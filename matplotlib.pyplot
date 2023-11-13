@@ -4,7 +4,7 @@ import numpy as np
 
 # Assuming you have a list of image file paths, segmentation mask file paths, and meta information
 image_paths = ["dsss_homework3/1.png", "dsss_homework3/2.png", "dsss_homework3/3.png", "dsss_homework3/4.png"]
-mask_paths = ["path_to_mask1.png", "path_to_mask2.png", "path_to_mask3.png", "path_to_mask4.png"]
+mask_paths = ["dsss_homework3/1_seg.png", "dsss_homework3/2_seg.png", "dsss_homework3/3_seg.png", "dsss_homework3/4_seg.png"]
 meta_info = ["Subject1.meta", "Subject2.meta", "Subject3.meta", "Subject4.meta"]
 
 # Create subplots
