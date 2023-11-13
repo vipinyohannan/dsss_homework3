@@ -3,9 +3,9 @@ from PIL import Image
 import numpy as np
 
 # Assuming you have a list of image file paths, segmentation mask file paths, and meta information
-image_paths = ["dsss_homework3/1.png", "dsss_homework3/2.png", "dsss_homework3/3.png", "dsss_homework3/4.png"]
-mask_paths = ["dsss_homework3/1_seg.png", "dsss_homework3/2_seg.png", "dsss_homework3/3_seg.png", "dsss_homework3/4_seg.png"]
-meta_info = ["Subject1.meta", "Subject2.meta", "Subject3.meta", "Subject4.meta"]
+image_paths = ["dsss_homework3/0.png", "dsss_homework3/1.png", "dsss_homework3/2.png", "dsss_homework3/3.png"]
+mask_paths = ["dsss_homework3/0_seg.png", "dsss_homework3/1_seg.png", "dsss_homework3/2_seg.png", "dsss_homework3/3_seg.png"]
+meta_info = ["dsss_homework3/0.meta", "dsss_homework3/1.meta", "dsss_homework3/2.meta", "dsss_homework3/3.meta"]
 
 # Create subplots
 fig, axes = plt.subplots(2, 2, figsize=(10, 10))
