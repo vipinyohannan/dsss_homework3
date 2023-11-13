@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+from PIL import Image
+import numpy as np
+
+# Assuming you have a list of image file paths, segmentation mask file paths, and meta information
+image_paths = ["path_to_image1.jpg", "path_to_image2.jpg", "path_to_image3.jpg", "path_to_image4.jpg"]
+mask_paths = ["path_to_mask1.png", "path_to_mask2.png", "path_to_mask3.png", "path_to_mask4.png"]
+meta_info = ["Subject1.meta", "Subject2.meta", "Subject3.meta", "Subject4.meta"]
+
+# Create subplots
+fig, axes = plt.subplots(2, 2, figsize=(10, 10))
+
+# Loop through each image and corresponding mask
+for i, (image_path, mask_path, meta_file) in enumerate(zip(image_paths, mask_paths, meta_info)):
+    # Load image and mask
+    image = Image.open(image_path)
+    mask = Image.open(mask_path)
+
+    # Assuming the mask is a binary mask (black and white)
+    mask_array = np.array(mask)
+    mask_array = np.stack([mask_array, mask_array, mask_array], axis=-1)
+
+    # Display image with mask overlaid
+    axes[i // 2, i % 2].imshow(np.array(image))
+    axes[i // 2, i % 2].imshow(mask_array, alpha=0.5)  # Overlay mask with transparency
+    axes[i // 2, i % 2].set_title(meta_file.split(".")[0])  # Set title from meta file
+
+# Adjust layout
+plt.tight_layout()
+
+# Show the plot
+plt.show()
